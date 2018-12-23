@@ -31,12 +31,18 @@ strong{
   font-family: cursive;
   color:darkgrey;
 }
+.carousel-item{
+
+}
+
+
+
 </style>
 
   </head>
   <body>
-
-  <nav>
+<div class="navbar-fixed">
+  <nav style="background-Color:#666666;">
     <div class="nav-wrapper">
       <a class="brand-logo" href="#" style="color:#ABA104;margin-left:10px;">
         <img src="logo.png" height="30px" alt="">
@@ -51,6 +57,8 @@ strong{
       </ul>
     </div>
   </nav>
+</div>
+
 
   <ul class="sidenav" id="mobile-demo">
   <li><a href="sass.html">Sass</a></li>
@@ -59,18 +67,18 @@ strong{
   <li><a href="mobile.html">Mobile</a></li>
 </ul>
 
-        <div id="mainslider" class="carousel carousel-slider">
-          <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
-          <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
-          <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
-          <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+        <div id="mainslider" class="carousel carousel-slider valign-wrapper">
+          <a class="carousel-item valign-wrapper" href="#one!"><img src="cards/IMG_3907.HEIC"></a>
+          <a class="carousel-item valign-wrapper" href="#two!"><img src="cards/IMG_4302.JPG"></a>
+          <a class="carousel-item valign-wrapper" href="#three!"><img src="cards/IMG_4556.JPG"></a>
+          <a class="carousel-item valign-wrapper" href="#four!"><img src="cards/IMG_4559.JPG"></a>
           <div class="carousel-fixed-item" style="text-align: center">
 
             <a class="waves-effect waves-light btn-large">Order Now</a>
           </div>
         </div>
 
-    <div style="text-align:center;padding-left:5%;padding-right:5%;background-color:black;color:white;">
+    <div style="text-align:center;padding-left:5%;padding-right:5%;padding-top:3%;padding-bottom:3%;background-color:black;color:white;">
         <h1><em style="color:lightgrey">Hi</em>, We’re Pen P.A.L.S Fundraising</h1>
 
 
@@ -82,14 +90,10 @@ strong{
           <br><br>
           You can find out more about Pen P.A.L.S. and what you can contribute at:</p>
 
-          <a class="waves-effect waves-light btn"><i class="material-icons left">more_horiz</i>Learn More</a>
-          <br>
-          <br>
-          <br>
-
   </div>
 
-  <div class="parallax-container" style="height: 50vh;">
+  <div class="parallax-container" style="height: 30vh;text-align:center;position: relative;">
+              <a class="waves-effect waves-light btn btn-large" style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);"><i class="material-icons left">more_horiz</i>Learn More</a>
     <div class="parallax">
 
       <img src="logo.png">
@@ -119,6 +123,20 @@ strong{
   </div>
 </div>
 
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <!-- Compiled and minified JavaScript -->
@@ -133,18 +151,23 @@ strong{
       var elems = document.querySelectorAll('.carousel');
       var carInstances = M.Carousel.init(elems, options);
 
+      document.getElementById("mainslider").style.height = document.getElementsByTagName("IMG")[1].naturalHeight*screen.width/document.getElementsByTagName("IMG")[1].naturalWidth-100 + "px";
+
       var elems = document.querySelectorAll('.sidenav');
       var instances = M.Sidenav.init(elems, {});
 
       var elems = document.querySelectorAll('.parallax');
       var instances = M.Parallax.init(elems, {});
 
+      var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, {});
+
       setInterval(function(){
         console.log(carInstances);
         for(ins of carInstances){
           ins.next();
         }
-      },3000)
+      },5000)
     });
 
     </script>
