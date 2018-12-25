@@ -169,7 +169,7 @@ function updateCart(){
   for(item of cart){
     totalCost+=cardInfo[item.Title].price;
     var itemDiv = document.createElement("DIV");
-      itemDiv.style.height = "10vw";
+      itemDiv.style.height = "15vh";
       itemDiv.style.border = "solid";
       itemDiv.style.borderRadius = "5px";
       itemDiv.style.padding = "5px";
