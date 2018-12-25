@@ -35,7 +35,9 @@ strong{
 
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 </style>
 
@@ -74,7 +76,7 @@ strong{
           <a class="carousel-item valign-wrapper" href="#four!"><img src="cards/IMG_4559.JPG"></a>
           <div class="carousel-fixed-item" style="text-align: center">
 
-            <a class="waves-effect waves-light btn-large">Order Now</a>
+            <a class="waves-effect waves-light btn-large" href="#artworks">Order Now</a>
           </div>
         </div>
 
@@ -101,13 +103,13 @@ strong{
   </div>
 </div>
 
-<div class="row">
+<div id="artworks" class="row">
   <div class="col s12 m6">
     <div class="card">
       <div class="card-image">
         <img class="activator" src="https://static.wixstatic.com/media/ec948a_2048fb5f473c419687504173e8823cd7~mv2_d_3694_3021_s_4_2.jpg/v1/fill/w_3694,h_2771,q_85,usm_0.66_1.00_0.01/ec948a_2048fb5f473c419687504173e8823cd7~mv2_d_3694_3021_s_4_2.jpg">
         <span class="card-title activator ">Watercolor Rainbow Birds Card</span>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a class="btn-floating halfway-fab waves-effect waves-light red activator"><i class="material-icons">add</i></a>
       </div>
       <div class="card-content">
         <p>$3.00</p>
@@ -115,6 +117,7 @@ strong{
       <div class="card-reveal">
         <span class="card-title grey-text text-darken-4">Watercolor Rainbow Birds Card<i class="material-icons right">close</i></span>
         <p class="flow-text">This card's <strong>text</strong> and <strong>color</strong> is fully costumizable </p>
+        <textarea placeholder="Enter any costum requests regarding the text here!"></textarea>
         <div style="text-align:center;">
           <a class="waves-effect waves-light btn-large"><i class="material-icons right">add</i>Add To Order</a>
         </div>
@@ -124,16 +127,31 @@ strong{
 </div>
 
 <!-- Modal Trigger -->
-<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+<div style="text-align:center;">
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1"><i class="material-icons left">shopping_cart</i>Check Out</a>
+</div>
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal bottom-sheet">
   <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
+    <h4>Here is what you have selected:</h4>
+    <p>Your total will be <span id="total">$0.00</span></p>
+    <div id="cartCards">
+      <div style="height:10vw;border:solid;border-radius:5px;padding: 5px; overflow-y:scroll;">
+        <img style="max-width: 100%;max-height: 100%;margin-right:5px;" align="left" src="https://static.wixstatic.com/media/ec948a_2048fb5f473c419687504173e8823cd7~mv2_d_3694_3021_s_4_2.jpg/v1/fill/w_3694,h_2771,q_85,usm_0.66_1.00_0.01/ec948a_2048fb5f473c419687504173e8823cd7~mv2_d_3694_3021_s_4_2.jpg">
+        <p style="word-break: break-all;">Title: card
+          <br>
+          Message instuctions: asdfasdfjsdfsfasdfhsdhfhsdfjsddjsfhjsdfjdfhjsdfsdhfgsdfgsdfjsdhfjksfsdhfnkb ashfdh fsdhfjksdgfhsdfjjsdfhjksdfjsdnfsdjkfhjsdfhudfhisd sdrksjadfgxdfdfgucgfuisdyusd lsdfjuisdf xcbfjisdfsdufjksdufjsdhjasdhsdfjdfguidfgsd asnmhsdgsdf
+          <br>
+          Color instuctions:
+          sdghfjkasdhjsdfhsdfjksdfjksdfhjsdfhsdfhnjsdfsdbfhjsdf sdhfjisd klsdfjkl asd asdojsd fuosd sdiof iosdh fjksdjfk sdkf asdjfsjkdfj sdjk fjkdsfjkasdb sdfksdkl sdf dfgfjgf njb dbvih dngdfhg xcjk djkf rgh d
+        </p>
+      </div>
+    </div>
   </div>
   <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="cartModal.close()">Keep Shoping</a>
+    <a href="#!" class="waves-effect waves-green btn" onclick="orderEmail()">Submit Order<i class="material-icons right">send</i></a>
   </div>
 </div>
 
@@ -141,35 +159,7 @@ strong{
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <script>
-    var options = {
-    fullWidth: true,
-    indicators: true,
-  }
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.carousel');
-      var carInstances = M.Carousel.init(elems, options);
-
-      document.getElementById("mainslider").style.height = document.getElementsByTagName("IMG")[1].naturalHeight*screen.width/document.getElementsByTagName("IMG")[1].naturalWidth-100 + "px";
-
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems, {});
-
-      var elems = document.querySelectorAll('.parallax');
-      var instances = M.Parallax.init(elems, {});
-
-      var elems = document.querySelectorAll('.modal');
-        var instances = M.Modal.init(elems, {});
-
-      setInterval(function(){
-        console.log(carInstances);
-        for(ins of carInstances){
-          ins.next();
-        }
-      },5000)
-    });
-
-    </script>
+    <script src="cards.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
