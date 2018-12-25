@@ -169,7 +169,7 @@ function updateCart(){
   for(item of cart){
     totalCost+=cardInfo[item.Title].price;
     var itemDiv = document.createElement("DIV");
-      itemDiv.style.height = "15vh";
+      itemDiv.style.height = "20vh";
       itemDiv.style.border = "solid";
       itemDiv.style.borderRadius = "5px";
       itemDiv.style.padding = "5px";
@@ -225,9 +225,8 @@ function updateCart(){
     loopNum++;
   }
   document.getElementById("total").innerText="$" + totalCost.toFixed(2);
-}
 
-function orderEmail(){
+
   if(cart.length !=0 ){
     var emailMessage = "";
     var count = 0;
@@ -242,8 +241,31 @@ function orderEmail(){
 
       emailMessage+="%0D%0D"
     }
+    document.getElementById("submitBtn").href='mailto:penpals.fundraising@gmail.com?subject=Card Order Request&body=Hi,%0DI would like to purchase the following cards:%0D%0D'+emailMessage
+  }else{
+    document.getElementById("submitBtn").href="#"
+  }
+
+
+}
+
+function orderEmail(){
+  if(cart.length !=0 ){
+    /*var emailMessage = "";
+    var count = 0;
+    for(var cardselem of cart){
+      count++;
+      console.log(cardselem);
+      emailMessage+="Item #"+count+":%0DType: "+cardselem["Title"]+"%0D"
+      if(cardselem["Costum Message"]!="")
+        emailMessage+="Costum Message: "+cardselem["Costum Message"]+"%0D"
+      if(cardselem["Costum Color"]!="")
+        emailMessage+="Costum Color: "+cardselem["Costum Color"]+"%0D"
+
+      emailMessage+="%0D%0D"
+    }
     window.open('mailto:penpals.fundraising@gmail.com?subject=Card Order Request&body=Hi,%0DI would like to purchase the following cards:%0D%0D'+emailMessage);
-    focus();
+    focus();*/
   }else{
     alert("Your cart is empty!");
   }
