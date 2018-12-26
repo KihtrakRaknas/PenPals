@@ -97,7 +97,7 @@ for(card in cardInfo){
             var cardRevealDivTextAreaText = document.createElement("TEXTAREA");
               cardRevealDivTextAreaText.id = card+"_text";
               cardRevealDivTextAreaText.classList.add("materialize-textarea");
-              cardRevealDivTextAreaText.placeholder = "Enter any costum requests regarding the text here!"
+              cardRevealDivTextAreaText.placeholder = "Costum requests regarding the text here!"
             cardRevealDiv.appendChild(cardRevealDivTextAreaText)
             }
             var cardRevealDivTextBR = document.createElement("BR");
@@ -106,7 +106,7 @@ for(card in cardInfo){
             var cardRevealDivTextAreaColor = document.createElement("TEXTAREA");
               cardRevealDivTextAreaColor.id = card+"_color";
               cardRevealDivTextAreaColor.classList.add("materialize-textarea");
-              cardRevealDivTextAreaColor.placeholder = "Enter any costum requests regarding the color here!"
+              cardRevealDivTextAreaColor.placeholder = "Costum requests regarding the color here!"
             cardRevealDiv.appendChild(cardRevealDivTextAreaColor)
             }
             cardRevealDiv.appendChild(cardRevealDivTextBR)
