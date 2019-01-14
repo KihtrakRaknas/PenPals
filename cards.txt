@@ -4,14 +4,14 @@ var cardInfo = {
     description: "This beautiful card can be personalized for all occasions, with the message (Whether it be a quote or a well wishing), and with the colors. Some popular occasions are birthdays, weddings, memorials, but this card is suited for any occasions.",
     customText: true,
     customColor: true,
-    image: "https://static.wixstatic.com/media/ec948a_2048fb5f473c419687504173e8823cd7~mv2_d_3694_3021_s_4_2.jpg/v1/fill/w_3694,h_2771,q_85,usm_0.66_1.00_0.01/ec948a_2048fb5f473c419687504173e8823cd7~mv2_d_3694_3021_s_4_2.jpg"
+    image: "cards/IMG_3907.HEIC"
   },
   "Rose Embellished Card":{
     price: 3.00,
     description: "Although this card is made for a thank you, can be personalized fro any holiday (Popular examples: Birthdays, Mother's Day). The rose color can also be personalized.",
     customText: true,
     customColor: true,
-    image: ""
+    image: "cards/IMG_4561.PNG"
   },
   "Card of Memories" :{
     price: 3.00,
@@ -25,14 +25,14 @@ var cardInfo = {
     description: "This card is a fun gift for any person, with bold calligraphy and a little present to top it off! As always, colors are always customizable, but in this card, the font really gives it the charm!",
     customText: true,
     customColor: true,
-    image: ""
+    image: "cards/IMG_4556.JPG"
   },
   "Roses and Birthdays Watercolor Cards" :{
     price: 3.00,
     description: "Beautiful splashes of colors add a pop to this card, and the little gold outlining and rose embellishments give the card a royal feel. Give this card to the kings and queens of your life, a gift worthy of any official! \nAs always, colors, and embellishments are easily customizable at no additional cost!",
     customText: true ,
     customColor: true,
-    image: ""
+    image: "cards/IMG_4559.JPG"
   },
   "Holiday Candle Card" :{
     price: 3.00,
@@ -46,7 +46,7 @@ var cardInfo = {
     description: "This beauty is perfect for the upcoming Christmas time, with golden lettering. It almost makes you wish you could hang this ornament on your tree!\nAs always, colors, writing, and embellishments are easily customizable at no additional cost!",
     customText: true,
     customColor: true,
-    image: ""
+    image: "IMG_6198.jpg"
   },
   "Light it Up Hanukkah Card" :{
     price: 3.00,
@@ -60,21 +60,21 @@ var cardInfo = {
     description: "This beautiful card is a treasure to anyone! Give it to the stars of your life, to wish them the happiest of holidays in a beautiful way, while you give others the happiness of friendship and education around the world.\nAs with all of our cards, if you would like to change the color of the writing or add other words, or change the message, simply let us know in your order.",
     customText: true,
     customColor: true,
-    image: ""
+    image: "cards/IMG_8344.jpg"
   },
   "Joyeux No'l!" :{
     price: 3.00,
     description: "Merry Christmas is wished around the world in many different ways. Pick your native language and email us, and we can make this card in whatever language you would like.",
     customText: true,
     customColor: true,
-    image: ""
+    image: "cards/IMG_8350.jpg"
   },
   "Although it's been said... Card":{
     price: 3.00,
     description: 'Christmas is a wonderful time for many people. As the words "Merry Christmas!" ring out from every corner, make sure you make your greeting original.\nRemember that you can change the holiday or color on the card, free of additional cost.',
     customText: true,
     customColor: true,
-    image: ""
+    image: "cards/IMG_8352.jpg"
   },
   "Winter Building Card":{
     price: 3.00,
